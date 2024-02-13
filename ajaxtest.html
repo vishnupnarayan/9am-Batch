@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("http://127.0.0.1:8000/product-list?format=json", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+      console.log(JSON.stringify(data));
+	    alert("data"+JSON.stringify(data));
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+</body>
+</html>
